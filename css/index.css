@@ -22,13 +22,14 @@ box-shadow:5px 5px 10px 10px #888888;
 .head-container
 {
     /* background: url("../img/header.png"); */
-    min-width: 100vh;
+    min-width: 50%;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     padding: 1em;
     background-color:#f5f2d0;
-
+    text-align: center;
 }
+
 .header-links
 {
   grid-column: 4;  
@@ -87,9 +88,9 @@ padding:1em 1em;
 }
 .section-grid2
 {
-    min-width: 100vh;
+    width: 100%;
     display: grid;
-    grid-template-columns: 3fr 6fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 1em;
     background:#014b77;
 }
@@ -165,7 +166,7 @@ h1
 }
 .main-grid
 {   
-    margin-top:0;
+    margin-top:1em;
     display: grid;
     grid-template-columns: 2fr 2fr;
     margin-left: 1em;
@@ -186,8 +187,8 @@ ul{
 .course-content
 {
 display: grid;
-grid-template-columns: 1fr 3fr  ;
-grid-template-rows:1fr 3fr ;
+grid-template-columns: 1fr 2fr;
+grid-template-rows:6fr ;
 /* grid-gap: 1em; */
 }
 .options
@@ -228,7 +229,7 @@ border-bottom: 1px solid black;
     grid-column: 2 /span 5;
     grid-row: 1/ 2;
     width: 100%;
-    height: 20em;
+    height: 100%;
     /* margin-bottom: 0; */
     
         
@@ -442,6 +443,7 @@ color: #888888;
 {
     list-style-type: none;
 }
+
 .footerhead
 {   color: #888888;
    
@@ -473,6 +475,12 @@ color: #888888;
 }
 
 @media screen and (max-width: 900px) {
+  
+   
+    .course-content
+    {
+        grid-template-columns:1fr 1fr;
+    }
     .head-container
     {
         grid-template-columns: 1fr 1fr 1fr;
@@ -508,8 +516,86 @@ color: #888888;
    .faculty:hover .more-links{
     display: block;
    }
+   .banner
+   {
+    display: none;
+   }
+  
+   .main-grid
+   {
+    /* display: block; */
+    width:auto;
+    grid-template-columns: 1fr 1fr ;  
+    grid-row:1;
+    /* position: absolute;
+    top:0;
+    left:0; */
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.annouce, .timetable, .grades, .account, .resources, .events, .forms, .mycard {
+    margin-bottom: 1em;
+    margin-left:1em;
+}
+.resources, .timetable, .resources, .annouce{
+    margin-right: 1em;
+    margin-left:1em;
+}
+.main-grid > .grades
+{
+grid-column:3fr;
+}
+    /* .main-grid
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-right: 0;
+        margin-left: 0;
+    } */
+    
 
   }
+
+
+@media (max-width:650px)
+{
+    .main-grid
+    {
+        display:block;
+        /* justify-self: center; */
+        grid-column: 2 black;
+        width: 25rem;
+    }
+    .footer{
+        width:45rem;
+    }
+    .section-grid2
+    {
+        min-width: 40rem;
+    }
+    
+    .head-container {
+       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media(max-width:515px)
+{
+
+    .footer-content{
+        display: block;
+
+      
+    }
+    .footer-content>div
+    {
+        padding-top:1em;
+        padding-bottom: 1em;
+    }
+}
+
  
 
 
